@@ -131,4 +131,7 @@ def about(username):
 
 if __name__ == '__main__':
     # For automatic reloading during development
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True) 
+
+# Note: In a production environment, debug should be set to False.
+# --------------------------------------------------------------------------------------------
