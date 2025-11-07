@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="grid-wrapper">
+        <header>
+            <!-- Link to external images file -->
+            <img src="{{ url_for('static', filename='images/CMFS-logo.png') }}"
+                alt="CMFS Logo" class="CMFS-logo-small"></img>
+                <h3>Customer Feedback Management System (CFMS)</h3>
+            <nav>
+                <a href="{{ url_for('about', username=username) }}">About</a>
+                <a href="{{ url_for('feedback', username=username) }}">Feedback</a>
+                <a href="/">Exit</a>
+                <span class="user-button">👤 Logged In: {{ username }}</span>
+            </nav>
+            <hr>
+        </header>
+        <div class="container">
+            <h1>Welcome, {{ username }}! 👋</h1>
+            <h3>Thank you for registering. We value your opinion!</h3>
+
+            <!-- Link to external images file -->
+            <img src="{{ url_for('static', filename='images/welcome.png') }}"
+                alt="Welcome image" class="welcome-image"></img>
+
+            <!-- Link to the feedback page -->
+            <a href="{{ url_for('feedback', username=username) }}" class="feedback-link">
+                Click here to submit your feedback
+            </a>
+        </div>
+        <footer>
+            <hr>  <!-- Horizontal line -->
+            <p>&copy; 2025 by Mohamed Zuraiman</p>
+        </footer>
+    </div>
+</body>
+</html>

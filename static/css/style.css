@@ -1,0 +1,186 @@
+/* 
++-----------------------------------------------------------------------------+
+| This CSS is for constancy in background color and font for all pages.       |
+| It is also for uniformity for the image size and placement.                 |
++-----------------------------------------------------------------------------+
+| Color Codes : #f0f8ff (AliceBlue), #1a456f (DarkBlue), #1e90ff (DodgerBlue) |
+| Used        : #9fc937 (Lime), #6c757d (Gray)                                |
++-----------------------------------------------------------------------------+
+*/
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.grid-wrapper {
+  display: grid;
+  /* Key: Define three rows. The second row (main content) takes up
+     all remaining space with 'auto', '1fr' means one fractional unit. */
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh; /* Ensures the wrapper is at least the viewport height */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #6c757d;  /* Gray for Author */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Consistent font */
+    background-color: #f0f8ff; /* Consistent background color (AliceBlue) */
+    color: #333; /* Dark text for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    background-color: #ffffff;  /* White background for contrast */
+    padding: 30px 40px; /* Increased padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 450px; /* Fixed max width for better layout */
+    width: 90%; /* Responsive width */
+}
+
+h1, h2  {
+    color: #1e90ff; /* DodgerBlue */
+    text-align: center; /* Centered headings */
+}
+
+h3 {
+    color: #1A456F; /* Lime */
+    text-align: center; /* Centered sub-headings */
+}
+
+/* Style for the CMFS Logo on the register page */
+.CMFS-logo {
+  width: 40%;   /* Adjusted width for better visibility */
+  max-width: 600px; /* Maximum width to prevent it from being too large */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #3498db;    /* Border to make it stand out */
+  border-radius: 8px;   /* Slightly rounded corners */
+  margin: 20px auto;    /* Center the image with margin */
+  display: block; /* To center block elements like images */
+}
+
+.CMFS-logo-small {
+  display: block; /* To center block elements like images */
+  margin: 0 auto 1px auto; /* Center the image with margin */
+  width: 15%;   /* Adjusted width for small logo at the top of the menu */
+}
+
+.welcome-image {
+  display: block; /* To center block elements like images */
+  margin: 0 auto 1px auto; /* Center the image with margin */
+  width: 50%;   /* Adjusted width for better visibility */
+}
+
+.user-button {
+    background-color: #9fc937; /* A pleasant green color */
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 0.7em;
+    transition: background-color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Pushes all items to opposite ends */
+    align-items: center;
+    
+    /* This centers any inline content (like <a> tags) within the <nav> */
+    text-align: center;
+    width: 100%; /* Ensure it spans the full width */
+}
+
+nav a {
+    margin: 0 15px; /* Spacing between links */
+    text-decoration: none; /* Remove underline */
+    color: #9fc937; /* Lime */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+form label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 8px; /* Space below labels */
+    font-weight: bold;  /* Bold labels for emphasis */
+}
+
+form input[type="text"],      /* For username */
+form input[type="password"],  /* For password */
+form textarea,                /* For comments */
+form input[type="range"] {
+    width: 100%;  /* Full width */
+    padding: 10px;  /* Padding for better usability */
+    margin-bottom: 20px;  /* Space below each input */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* For padding and width calculation */
+}
+
+form textarea {
+    resize: vertical;   /* Allow vertical resizing */
+    min-height: 100px;  /* Minimum height for better usability */
+}
+
+form input[type="submit"] {
+    background-color: #1e90ff;  /* DodgerBlue */
+    color: white;   /* White text */
+    padding: 12px 20px; /* Padding for better click area */
+    border: none;   /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;    /* Pointer cursor on hover */
+    font-size: 16px;    /* Larger font size */
+    width: 100%;    /* Full width */
+}
+
+form input[type="submit"]:hover {
+    background-color: #007bb5;
+}
+
+/* Styling for the smiley image (Task 4) */
+.smiley-image {
+    display: block; /* This will ensure it takes up its own line */
+    margin: 20px auto; /* Center the image */
+    width: 100px; /* Uniform size */
+    height: 100px; /* Uniform size */
+    object-fit: contain; /* Ensures the whole image is visible */
+    border: 3px solid #ccc;
+    border-radius: 50%; /* Makes it circular */
+    padding: 5px;
+}
+
+/* Style for the link on the welcome page */
+.feedback-link {
+    display: block; /* Make it block element */
+    text-align: center; /* Center the link */
+    margin-top: 20px;   /* Space above the link */
+    font-size: 1.1em;   /* Slightly larger font */
+    color: #007bb5;  /* Link color */
+    text-decoration: none;  /* No underline */
+    font-weight: bold;  /* Bold text */
+}
+
+.feedback-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.result-details {
+    margin-top: 20px;   /* Space above the details */
+    padding: 15px;  /* Padding for better readability */
+    border: 1px dashed #1e90ff; /* DodgerBlue dashed border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+}

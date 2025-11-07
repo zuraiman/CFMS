@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Feedback</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="grid-wrapper">
+        <header>
+            <!-- Link to external images file -->
+            <img src="{{ url_for('static', filename='images/CMFS-logo.png') }}"
+                alt="CMFS Logo" class="CMFS-logo-small"></img>
+                <h3>Customer Feedback Management System (CFMS)</h3>
+            <nav>
+                <a href="{{ url_for('welcome', username=username) }}">Welcome</a>
+                <a href="{{ url_for('about', username=username) }}">About</a>
+                <a href="/">Exit</a>
+                <span class="user-button">👤 Logged In: {{ username }}</span>
+            </nav>
+            <hr>
+        </header>
+        <div class="container">
+            <h2>We appreciate your feedback!</h2>
+            <!-- Form to capture rating and comments -->
+            <form method="POST">  <!-- Form uses POST method to submit data -->
+
+                <label for="rating">Rating (1 to 5): <span id="ratingValue">3</span></label>
+                <!-- Range input for rating -->
+                <input type="range" id="rating" name="rating" min="1" max="5" value="3" oninput="document.getElementById('ratingValue').innerText = this.value" required>
+                
+                <label for="comment">Written Feedback:</label>
+                <!-- Textarea for comments -->
+                <textarea id="comment" name="comment" placeholder="Tell us about your experience..." required></textarea>
+
+                <!-- Submit button -->
+                <input type="submit" value="Submit Feedback">
+            </form>
+        </div>
+        <footer>
+            <hr>  <!-- Horizontal line -->
+            <p>&copy; 2025 by Mohamed Zuraiman</p>
+        </footer>
+    </div>
+</body>
+</html>

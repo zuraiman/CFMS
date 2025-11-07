@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="grid-wrapper">
+        <div class="container">
+            <!-- Link to external images file -->
+            <img src="{{ url_for('static', filename='images/CMFS-logo.png') }}"
+                alt="CMFS Logo" 
+                class="CMFS-logo"></img>
+            <h2>Customer Feedback Management System (CMFS)</h2>
+            <h3>User Registration</h3>
+
+            <!-- Form to capture username and password -->
+            <form method="POST">  <!-- Form uses POST method to submit data -->
+                <label for="username">Username:</label>
+                <!-- Input for username -->
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password:</label>
+                <!-- Input for password -->
+                <input type="password" id="password" name="password" required>
+
+                <!-- Submit button -->
+                <input type="submit" value="Register">
+            </form>
+        </div>
+        <footer>
+            <hr>  <!-- Horizontal line -->
+            <p>&copy; 2025 by Mohamed Zuraiman</p>
+        </footer>
+    </div>
+</body>
+</html>
